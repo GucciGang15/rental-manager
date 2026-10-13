@@ -12,7 +12,9 @@ class RentalController extends Controller
      */
     public function index()
     {
-        //
+        $rentals = Rental::with(['customer','employee','rental_details'])->get();
+
+        return dd($rentals);
     }
 
     /**

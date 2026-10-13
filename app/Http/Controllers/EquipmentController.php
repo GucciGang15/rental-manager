@@ -12,7 +12,9 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        //
+        $equipments = Equipment::with('category')->get();
+
+        return dd($equipments);
     }
 
     /**
